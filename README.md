@@ -17,7 +17,7 @@ In order to create a Google Cloud bucket you will need a Google Cloud Project & 
 7. A json file should have been downloaded which can be used to access the service account. **DO NOT SHARE IT AND DO NOT UPLOAD BY VERSION CONTROL AS IT IS SENSITIVE DATA**
 
 ###Creating the bucket
-1. You should already have a .json file attached to a service account with sufficient roles to create a bucket. Rename this file to ```terraform_keyfile.json``` And place it inside the ```init````folder of this project. Terraform will use the file for authentication & authorization
+1. You should already have a .json file attached to a service account with sufficient roles to create a bucket. Rename this file to ```terraform_keyfile.json``` And place it in the root folder of this project. Terraform will use the file for authentication & authorization
 2. Great, terraform has an identity, and is ready to create the bucket! We're missing a name for the bucket however. Run the following command to create an environment variable which Terraform will use to name the bucket
 For windows:
 ```
@@ -55,4 +55,33 @@ export TF_VAR_project_id=$gpc-project-id
 6. Run command
 ```terraform apply```
 7. Viola! Terraform has now created a bucket which can be found in the google cloud project.
+
+Todo: Følg den samme flyten som de har gjort på google tutorialene?
+
+
+###Provisioning GCP resources with Terraform
+In this guide we will provision Google Cloud Platform services by using terraform. Before following this guide, it's important that you already have a Google Bucket already. If not, please refer to the description above for how to create one. We will use Google Cloud Storage to store a state file from Terraform. This state file is used by Terraform to map real world resource to our configurations, keep track of metadata, and improve performance of large infrastructures. 
+
+Before we start, the terraform service account will need more permissions. Add the following roles to our terraform service account:
+- Todo: insert here
+
+- Identity and Access Management (IAM) API needs to be enabled (?)
+- Compute Engine API needs to be enabled
+
+
+
+Let's get started!
+1. Open the ```backend.tf``` file in the root directory and change the bucket name to the bucket name which you previously created.
+```
+terraform {
+  #Save the terraform state (backend) to google cloud storage (gcs)
+  backend "gcs" {
+    bucket = "hello-world"  <------------------------   Replace hello-world with your bucket name
+    #Prefix inside the bucket. Will create a workspace with such name
+    prefix = "terraformstate"
+    credentials = "terraform_keyfile.json"
+  }
+}
+```
+
 
