@@ -11,7 +11,7 @@ terraform {
 provider "google" {
   version = "3.5.0"
   credentials = file("terraform_keyfile.json")
-  project     = "decisive-mapper-306016"
+  project     = var.project_id
   region  = "us-central1"
   zone    = "us-central1-c"
 }
