@@ -18,7 +18,7 @@ In order to create a Google Cloud bucket you will need a Google Cloud Project & 
 
 ###Creating the bucket
 1. You should already have a .json file attached to a service account with sufficient roles to create a bucket. Rename this file to ```terraform_keyfile.json``` And place it inside the ```init````folder of this project. Terraform will use the file for authentication & authorization
-2. Terraform can use an identity now, and is ready to create the bucket! We're missing a name for the bucket however. Run the following command to create an environment variable which Terraform will use to name the bucket
+2. Great, terraform has an identity, and is ready to create the bucket! We're missing a name for the bucket however. Run the following command to create an environment variable which Terraform will use to name the bucket
 For windows:
 ```
 set gcp-bucket-name=[INSERT BUCKET NAME HERE]
@@ -37,10 +37,22 @@ For linux/mac:
 ```
 export gcp-project-id=[INSERT PROJECT ID HERE]
 ```
-4. Run command
-```terraform init```
+4. Export the environment variables to terraform
+For windows:
+```
+set TF_VAR_bucket_name=%gcp-bucket-name%
+set TF_VAR_project_id=%gcp-project-id%
+```
+For linux/mac:
+```
+export TF_VAR_bucket_name=$gpc-bucket-name
+export TF_VAR_project_id=$gpc-project-id
+```
 
 5. Run command
+```terraform init```
+
+6. Run command
 ```terraform apply```
-6. Viola! Terraform has now created a bucket which can be found in the google cloud project.
+7. Viola! Terraform has now created a bucket which can be found in the google cloud project.
 
