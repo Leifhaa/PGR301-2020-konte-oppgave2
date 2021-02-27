@@ -42,7 +42,7 @@ The repository contains 3 independent guides. Guide 1 is necessary to complete b
 <!-- tocstop -->
 
 # Guide 1. Creating a Google Cloud Project and google service account
-If you already have a Google Cloud Project and Google Service account, you can skip this guide. Make sure you have a Key file as explained in step 4 however.
+If you already have a Google Cloud Project and Google Service account, you can skip this guide. Make sure you have a Key file as explained in step 4.
 ## 1. Create a google project
 Create a Google Cloud Project (https://cloud.google.com/)
 ## 2. Enable billing
@@ -59,7 +59,7 @@ A json file should have been downloaded which can be used to access the service 
 
 # Guide 2. Creating the bucket
 Before following this guide, it's important that you've already completed these steps:
-- Created a Google Cloud project and service account. If not, follow [these steps](#Creating-a-google-cloud-project-and-google-service-account) before beginning.
+- Created a Google Cloud project and service account. If not, follow [these steps](#Guide-1.-Creating-a-Google-Cloud-Project-and-google-service-account) before beginning.
 
 
 ## 1. Add roles to the service account
