@@ -130,7 +130,7 @@ before_install:
 ```
 
 
-### 5. Commit the changes
+## 5. Commit the changes
 :warning: **The terraform.keyfile.json file should not be committed to repository or shared** :warning:
 Commit the updated .travis.yml and the encrypted key file to github
 ```shell script
@@ -144,6 +144,14 @@ git commit -m "Updated service account"
 ```shell script
 git push -u origin master
 ```
+
+## 6. Set travis environment variable
+Run command 
+```shell script
+travis env set TF_ENV_machine_type f1-micro --public
+```
+This will set an environment in travis which we will use to specify which type of compute instance we want.
+
 
 
 

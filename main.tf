@@ -1,6 +1,6 @@
 resource "google_compute_instance" "gcp-compute-instance" {
   name         = "hello-konte"
-  machine_type = "e2-micro"
+  machine_type = var.machine_type
   zone         = "us-central1-c"
 
   tags = ["hello", "konte"]
