@@ -18,9 +18,9 @@ We're going to open a Service account which terraform can use to create a bucket
 - Click "Create service account"
 - Fill in account details. Skip adding roles now, as we will handle these later
 ## 4. Add Key file to service account
-Open the newly created service account & click the "KEYS" tab. Create a new key by clicking "ADD NEW" and select JSON format. 
-## 5. 
+- Open the newly created service account & click the "KEYS" tab. Create a new key by clicking "ADD NEW" and select JSON format. 
 A json file should have been downloaded which can be used to access the service account. :warning: **DO NOT SHARE IT AND DO NOT UPLOAD BY VERSION CONTROL AS IT IS SENSITIVE DATA** :warning:
+
 
 # Creating the bucket
 Before following this guide, it's important that you've already completed these steps:
