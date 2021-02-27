@@ -138,7 +138,7 @@ git add terraform_keyfile.json.enc .travis.yml
 ```
 
 ```shell script 
-git commit -m "Updated service account
+git commit -m "Updated service account"
 ```
 
 ```shell script
