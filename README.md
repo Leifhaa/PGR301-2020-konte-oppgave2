@@ -20,8 +20,13 @@ In order to create a Google Cloud bucket you will need a Google Cloud Project & 
 Before following this guide, it's important that you've already completed these steps:
 - Created a Google Cloud project and service account. If not, follow [these steps](#Creating-a-google-cloud-project-and-google-service-account) before beginning.
 
-1. You should already have a .json file attached to a service account with sufficient roles to create a bucket. Rename this file to ```terraform_keyfile.json``` And place it in the root folder of this project. Terraform will use the file for authentication & authorization
-2. Great, terraform has an identity, and is ready to create the bucket! We're missing a name for the bucket however. Run the following command to create an environment variable which Terraform will use to name the bucket
+
+1. In order to complete this guide, add the following roles to the service account:
+|Role name | Description |
+| --- | --- |
+| Storage Admin | Grants full controll of GCS sources, such as creating a bucket |
+2. You should already have a .json file attached to a service account with sufficient roles to create a bucket. Rename this file to ```terraform_keyfile.json``` And place it in the root folder of this project. Terraform will use the file for authentication & authorization
+3. Great, terraform has an identity, and is ready to create the bucket! We're missing a name for the bucket however. Run the following command to create an environment variable which Terraform will use to name the bucket
 For windows:
 ```
 set gcp-bucket-name=[INSERT BUCKET NAME HERE]
@@ -31,7 +36,7 @@ For linux/mac:
 export gcp-bucket-name=[INSERT BUCKET NAME HERE]
 ```
 Note: Bucket name is unique & global meaning that you can't have same bucket name as anyone else.
-3. Set the project id of the google cloud project as an enviroment variable:
+4. Set the project id of the google cloud project as an enviroment variable:
 For windows:
 ```
 set gcp-project-id=[INSERT PROJECT ID HERE]
@@ -40,7 +45,7 @@ For linux/mac:
 ```
 export gcp-project-id=[INSERT PROJECT ID HERE]
 ```
-4. Export the environment variables to terraform
+5. Export the environment variables to terraform
 For windows:
 ```
 set TF_VAR_bucket_name=%gcp-bucket-name%
@@ -52,12 +57,12 @@ export TF_VAR_bucket_name=$gpc-bucket-name
 export TF_VAR_project_id=$gpc-project-id
 ```
 
-5. Run command
+6. Run command
 ```terraform init```
 
-6. Run command
+7. Run command
 ```terraform apply```
-7. Viola! Terraform has now created a bucket which can be found in the google cloud project.
+8. Viola! Terraform has now created a bucket which can be found in the google cloud project.
 
 Todo: Følg den samme flyten som de har gjort på google tutorialene?
 
