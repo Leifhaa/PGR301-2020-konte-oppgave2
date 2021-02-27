@@ -36,6 +36,7 @@ install: true
 script:
   - |-
     set -ex;
+    export TF_VAR_project_id=$GCP_PROJECT_ID
     terraform init
     terraform plan
     terraform apply --auto-approve
