@@ -28,18 +28,16 @@ The repository contains 3 independent guides. Guide 1 is necessary to complete b
   * [4. Set project id](#4-set-project-id)
   * [5 Export terraform variables](#5-export-terraform-variables)
   * [6 Run terraform](#6-run-terraform)
-  * [7. Viola! Terraform has now created a bucket which can be found in the google cloud project.](#7-viola-terraform-has-now-created-a-bucket-which-can-be-found-in-the-google-cloud-project)
+  * [7. :rainbow: Viola! Terraform has now created a bucket which can be found in the google cloud project.](#7-rainbow-viola-terraform-has-now-created-a-bucket-which-can-be-found-in-the-google-cloud-project)
 - [Guide 3. Provisioning GCP resources with Terraform](#guide-3-provisioning-gcp-resources-with-terraform)
   * [1. Setting up the roles](#1-setting-up-the-roles)
   * [2. Set terraform backend storage](#2-set-terraform-backend-storage)
-  * [3. Open .travis.yml located the root folder. Change the Global environment variable "GCP_PROJECT_ID" to your project id](#3-open-travisyml-located-the-root-folder-change-the-global-environment-variable-gcp_project_id-to-your-project-id)
+  * [3. Edit project id in travis](#3-edit-project-id-in-travis)
   * [4. Encrypt service account key file](#4-encrypt-service-account-key-file)
   * [5. Commit the changes](#5-commit-the-changes)
   * [6. Set travis environment variable](#6-set-travis-environment-variable)
 
 <!-- tocstop -->
-
-
 
 # Guide 1. Creating a Google Cloud Project and google service account
 If you already have a Google Cloud Project and Google Service account, you can skip this guide. Make sure you have a Key file as explained in step 4 however.
@@ -145,7 +143,8 @@ terraform {
   }
 }
 ```
-## 3. Open .travis.yml located the root folder. Change the Global environment variable "GCP_PROJECT_ID" to your project id
+## 3. Edit project id in travis
+Open .travis.yml located the root folder. Change the Global environment variable "GCP_PROJECT_ID" to your project id
 ```diff
 env:
   global:
@@ -161,7 +160,7 @@ travis encrypt-file terraform_keyfile.json --pro
  Console will output a file starting with `openssl aes-256-cbc ...`. 
  - Copy this line to clipboard. 
  - Edit `.travis.yml` and go to the "before_install" step. You will find a similar line as you just copied.
- - Replace this with the one you copied in the clipboard. The changes would look like this:
+ - Replace this with the one you copied in the clipboard. The changes would look something like this:
 ```diff
 before_install:
   #Travis will decrypt our key file and use it
