@@ -29,9 +29,9 @@ Before following this guide, it's important that you've already completed these 
 
 ## 1. Add roles to the service account
 In order to complete this guide, add the following roles to the service account:
-| Role name | Description |
-| --- | --- |
-| Storage Admin | Grants full controll of GCS sources, such as creating a bucket |
+| Role name | Description | Reason |
+| --- | --- | --- |
+| Storage Admin | Grants full controll of GCS sources | Service account needs to be allowed to create a bucket
 
 ## 2. Set keyfile
 You should already have a .json file attached to a service account with sufficient roles to create a bucket. Rename this file to `terraform_keyfile.json` And place it in the root folder of this project. Terraform will use the file for authentication & authorization
@@ -89,10 +89,12 @@ In this guide we will provision Google Cloud Platform services by using terrafor
 ## 1. Setting up the roles
 Your service account will need sufficient roles in order to create the infrastructure. Visit the IAM page in Google Cloud Platform and add the following roles to your service account
 
-| Role name | Description |
-| --- | --- |
-| Storage Admin | Grants full controll of GCS sources, such as creating a bucket |
-| Compute Admin | Full control of compute resources, such as creating one |
+| Role name | Description | Reason |
+| --- | --- | --- |
+| Storage Admin | Grants full controll of GCS sources | Needs access to bucket for managing the state file |
+| Compute Admin | Full control of compute resources | Needs access to create, delete and manage compute instances  |
+| Create Service Accounts | Access to create service accounts | Terraform needs to create a service account for compute instance (recommended by google) |
+| Service Account User | Run operation as the service account | Needed for attaching created service account to compute instance (recommended by google) |
 > Notice: We're only adding required roles to the service account. This reduces damage in case the service account is stolen.
 ## 2. Set terraform backend storage
 Open the ```backend.tf``` file in the root directory and change the bucket name to the bucket name which you previously created.
