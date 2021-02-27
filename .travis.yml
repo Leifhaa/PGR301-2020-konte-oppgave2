@@ -1,3 +1,4 @@
+language: bash
 env:
   global:
     - GCP_PROJECT_ID=decisive-mapper-306016
@@ -34,11 +35,5 @@ before_install:
 install: true
 
 script:
-  - |-
-    set -ex;
-    export TF_VAR_project_id=$GCP_PROJECT_ID
-    export TF_VAR_machine_type=$TF_ENV_machine_type
-    terraform init
-    terraform plan
-    terraform apply --auto-approve
-    terraform output
+  - bash ./scripts/terraform-apply.sh
+
