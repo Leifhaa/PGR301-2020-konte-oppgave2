@@ -1,6 +1,6 @@
 env:
   global:
-    - GCP_PROJECT_ID=exam-295817
+    - GCP_PROJECT_ID=decisive-mapper-306016
     #Set which terraform version travis should install
     - tf_version=0.13.5
     #Disable google cloud sdk from asking prompts such as 'Are you sure...'
@@ -36,6 +36,7 @@ install: true
 script:
   - |-
     set -ex;
+    export TF_VAR_project_id=$GCP_PROJECT_ID
     terraform init
     terraform plan
     terraform apply --auto-approve
