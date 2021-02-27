@@ -113,6 +113,25 @@ env:
   global:
 !     - GCP_PROJECT_ID=helloworld       <------  Change helloworld to your google cloud project id
 ```
-4. 
+## 4. Encrypt service account key file
+Considering we want travis to run terraform for building the infrastructure, it needs to authenticate itself. We will encrypt the json key file attached to the service account upload this encrypted file to travis so it can authenticate.
+- Make sure the json key file is located in the root directory of this project. It has to be named `terraform_keyfile.json`
+- Make sure terminal is in the root directory of this project and run the following:
+```sh
+travis encrypt-file terraform_keyfile.json --pro
+```
+Console will output a file starting with `openssl aes-256-cbc ...`. Copy this line to clipboard. Edit .travis.yml and go to the "before_install" step. You will find a similar line as you just copied. Replace this with the one you copied in clipboard as shown:
+```diff
+before_install:
+  #Travis will decrypt our key file and use it
+-  - openssl aes-256-cbc -K $encrypted_61dc43fb09f9_key -iv $encrypted_61dc43fb09f9_iv -in terraform_keyfile.json.enc -out terraform_keyfile.json -d
++  - openssl aes-256-cbc -K $encrypted_18ehq8qu39r8_key -iv $encrypted_18ehq8qu39f8_iv -in terraform_keyfile.json.enc -out terraform_keyfile.json -d
+...
+```
+
+
+### 3. Todo
+:warning: Make sure that terraform.keyfile.json is not commited to the repository. Only the encrypted file `terraform_keyfile.json.enc` should be commited
+
 
 
