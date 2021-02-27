@@ -120,7 +120,10 @@ Considering we want travis to run terraform for building the infrastructure, it 
 ```sh
 travis encrypt-file terraform_keyfile.json --pro
 ```
- Console will output a file starting with `openssl aes-256-cbc ...`. Copy this line to clipboard. Edit .travis.yml and go to the "before_install" step. You will find a similar line as you just copied. Replace this with the one you copied in clipboard as shown:
+ Console will output a file starting with `openssl aes-256-cbc ...`. 
+ - Copy this line to clipboard. 
+ - Edit .travis.yml and go to the "before_install" step. You will find a similar line as you just copied.
+ - Replace this with the one you copied in the clipboard. The changes would look like this:
 ```diff
 before_install:
   #Travis will decrypt our key file and use it
