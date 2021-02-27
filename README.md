@@ -134,7 +134,7 @@ before_install:
 :warning: **The terraform.keyfile.json file should not be committed to repository or shared** :warning:
 Commit the updated .travis.yml and the encrypted key file to github
 ```shell script
-git add terraform-keyfile.json.enc .travis.yml
+git add terraform_keyfile.json.enc .travis.yml
 ```
 
 ```shell script 
