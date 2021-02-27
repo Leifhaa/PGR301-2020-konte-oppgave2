@@ -65,7 +65,7 @@ Todo: Følg den samme flyten som de har gjort på google tutorialene?
 
 ### Provisioning GCP resources with Terraform
 Before following this guide, it's important that you've already completed these steps:
-- Created a Google Cloud project and service account. If not, follow [these steps](#Creating a google cloud project and google service account) first
+- Created a Google Cloud project and service account. If not, follow [these steps](###Creating a google cloud project and google service account) first
 - Created a google cloud bucket. If not, please refer to the description above [Insert link] for how to create one. We will use Google Cloud Storage to store a state file from Terraform.
 
 It's also important that your service account minimum has these roles:
