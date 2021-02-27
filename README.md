@@ -77,8 +77,6 @@ terraform apply
 ```
 8. Viola! Terraform has now created a bucket which can be found in the google cloud project.
 
-Todo: Følg den samme flyten som de har gjort på google tutorialene?
-
 
 # Provisioning GCP resources with Terraform
 Before following this guide, it's important that you've already completed these steps:
