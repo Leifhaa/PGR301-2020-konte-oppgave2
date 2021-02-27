@@ -111,7 +111,7 @@ Run the following commands:
 terraform init
 terraform apply
 ```
-## 7. Viola! Terraform has now created a bucket which can be found in the google cloud project.
+## 7. :rainbow: Viola! Terraform has now created a bucket which can be found in the google cloud project.
 >Tip: Step 3-7 could also be done by opening the init/scripts folder and running the deploy script according to your operating system.
 TODO: TEST LINUX SCRIPT
 
