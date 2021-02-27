@@ -12,6 +12,8 @@ resource "google_compute_instance" "gcp-compute-instance" {
     }
   }
 
+  #Allows terraform to stop the instance, so we can e.g switch to another compute type.
+  allow_stopping_for_update = true
 
   network_interface {
     #Name of the network which the server should be connected to
