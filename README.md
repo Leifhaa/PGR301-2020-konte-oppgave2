@@ -3,8 +3,10 @@
 - Repository 1/2 can be found [here](https://github.com/Leifhaa/konte)
 - The exam text can be found [here](https://github.com/Leifhaa/konte/docs)
 
-The repository contains 3 independent guides. Guide 1 is necessary to complete before doing guide 2 and so on. Guide 2 answers task 2 of the exam. Guide 3 answers task 3 of the exam. __
-Prerequisites before running any of the guides:
+The repository contains 3 independent guides. Guide 1 is necessary to complete before doing guide 2 and so on. Guide 2 answers task 2 of the exam. Guide 3 answers task 3 of the exam.
+<br />
+<br />
+ Prerequisites before running any of the guides:
 * Installed Terraform (https://www.terraform.io/downloads.html)
 * Installed Gcloud SDK (https://cloud.google.com/sdk/docs/install)
 ### Table of contents
