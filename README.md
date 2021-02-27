@@ -3,8 +3,10 @@
 - Repository 1/2 can be found [here](https://github.com/Leifhaa/konte)
 - The exam text can be found [here](https://github.com/Leifhaa/konte/docs)
 
-The repository contains 3 independent guides. Guide 1 is necessary to complete before doing guide 2 and so on. Guide 2 answers task 2 of the exam. Guide 3 answers task 3 of the exam.
-
+The repository contains 3 independent guides. Guide 1 is necessary to complete before doing guide 2 and so on. Guide 2 answers task 2 of the exam. Guide 3 answers task 3 of the exam.  
+Prerequisites before running any of the guides:
+* Installed Terraform (https://www.terraform.io/downloads.html)
+* Installed Gcloud SDK (https://cloud.google.com/sdk/docs/install)
 ### Table of contents
 <!--
   ⚠️ DO NOT UPDATE THE TABLE OF CONTENTS MANUALLY ️️⚠️
@@ -36,11 +38,8 @@ The repository contains 3 independent guides. Guide 1 is necessary to complete b
 
 <!-- tocstop -->
 
-Prerequisites before running any of the guides:
-* Installed Terraform (https://www.terraform.io/downloads.html)
-* Installed Gcloud SDK (https://cloud.google.com/sdk/docs/install)
 
-In order to create a Google Cloud bucket you will need a Google Cloud Project & a Google Service account. If you don't have this already, please follow these steps in order before proceeding with creating a bucket
+
 # Guide 1. Creating a Google Cloud Project and google service account
 If you already have a Google Cloud Project and Google Service account, you can skip this guide. Make sure you have a Key file as explained in step 4 however.
 ## 1. Create a google project
