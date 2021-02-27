@@ -54,7 +54,7 @@ We're going to open a Service account which terraform can use to create a bucket
 - Fill in account details. Skip adding roles now, as we will handle these later
 ## 4. Add Key file to service account
 - Open the newly created service account & click the "KEYS" tab. Create a new key by clicking "ADD NEW" and select JSON format. 
-A json file should have been downloaded which can be used to access the service account.  :warning: **DO NOT SHARE IT AND DO NOT UPLOAD BY VERSION CONTROL AS IT IS SENSITIVE DATA** :warning:
+A json file should have been downloaded which can be used to access the service account.\ :warning: **DO NOT SHARE IT AND DO NOT UPLOAD BY VERSION CONTROL AS IT IS SENSITIVE DATA** :warning:
 
 
 # Guide 2. Creating the bucket
@@ -160,7 +160,7 @@ travis encrypt-file terraform_keyfile.json --pro
 ```
  Console will output a file starting with `openssl aes-256-cbc ...`. 
  - Copy this line to clipboard. 
- - Edit .travis.yml and go to the "before_install" step. You will find a similar line as you just copied.
+ - Edit `.travis.yml` and go to the "before_install" step. You will find a similar line as you just copied.
  - Replace this with the one you copied in the clipboard. The changes would look like this:
 ```diff
 before_install:
@@ -172,8 +172,8 @@ before_install:
 
 
 ## 5. Commit the changes
-:warning: **The terraform.keyfile.json file should not be committed to repository or shared** :warning:
-Commit the updated .travis.yml and the encrypted key file to github
+:warning: **The terraform.keyfile.json file should not be committed to repository or shared** :warning:.\
+Commit the updated `.travis.yml` and the encrypted key file to github
 ```shell script
 git add terraform_keyfile.json.enc .travis.yml
 ```
