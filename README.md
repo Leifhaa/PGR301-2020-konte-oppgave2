@@ -14,7 +14,7 @@ In order to create a Google Cloud bucket you will need a Google Cloud Project & 
 4. Fill in the Service account details
 5. Skip granting of roles for now. These will be added later
 6. Open the newly created service account & click the "KEYS" tab. Create a new key by clicking "ADD NEW" and select JSON format. 
-7.  A json file should have been downloaded which can be used to access the service account. :warning **DO NOT SHARE IT AND DO NOT UPLOAD BY VERSION CONTROL AS IT IS SENSITIVE DATA**
+7.  A json file should have been downloaded which can be used to access the service account. :warning: **DO NOT SHARE IT AND DO NOT UPLOAD BY VERSION CONTROL AS IT IS SENSITIVE DATA** :warning:
 
 # Creating the bucket
 Before following this guide, it's important that you've already completed these steps:
@@ -85,7 +85,8 @@ Your service account will need sufficient roles in order to create the infrastru
 | Storage Admin | Grants full controll of GCS sources, such as creating a bucket |
 | Compute Admin | Full control of compute resources, such as creating one |
 > Notice: We're only adding required roles to the service account. This reduces damage in case the service account is stolen.
-## 2. Open the ```backend.tf``` file in the root directory and change the bucket name to the bucket name which you previously created.
+## 2. Set terraform backend storage
+Open the ```backend.tf``` file in the root directory and change the bucket name to the bucket name which you previously created.
 ```diff
 terraform {
   #Save the terraform state (backend) to google cloud storage (gcs)
