@@ -90,7 +90,7 @@ Your service account will need sufficient roles in order to create the infrastru
 terraform {
   #Save the terraform state (backend) to google cloud storage (gcs)
   backend "gcs" {
-!    bucket = "hello-world"  <------- Replace hello-world with your bucket name
+!   bucket = "hello-world"  <------- Replace hello-world with your bucket name
     #Prefix inside the bucket. Will create a workspace with such name
     prefix = "terraformstate"
     credentials = "terraform_keyfile.json"
@@ -98,9 +98,10 @@ terraform {
 }
 ```
 ## 3. Open .travis.yml located the root folder. Change the Global environment variable "GCP_PROJECT_ID" to your project id
-```env:
-     global:
-       - GCP_PROJECT_ID=helloworld       <------  Change helloworld to your google cloud project id
+```diff
+env:
+  global:
+!     - GCP_PROJECT_ID=helloworld       <------  Change helloworld to your google cloud project id
 ```
 4. 
 
