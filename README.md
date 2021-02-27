@@ -120,7 +120,7 @@ Considering we want travis to run terraform for building the infrastructure, it 
 ```sh
 travis encrypt-file terraform_keyfile.json --pro
 ```
-Console will output a file starting with `openssl aes-256-cbc ...`. Copy this line to clipboard. Edit .travis.yml and go to the "before_install" step. You will find a similar line as you just copied. Replace this with the one you copied in clipboard as shown:
+ Console will output a file starting with `openssl aes-256-cbc ...`. Copy this line to clipboard. Edit .travis.yml and go to the "before_install" step. You will find a similar line as you just copied. Replace this with the one you copied in clipboard as shown:
 ```diff
 before_install:
   #Travis will decrypt our key file and use it
@@ -130,8 +130,12 @@ before_install:
 ```
 
 
-### 3. Todo
-:warning: Make sure that terraform.keyfile.json is not commited to the repository. Only the encrypted file `terraform_keyfile.json.enc` should be commited
+### 5. Commit the changes
+:warning: **The terraform.keyfile.json file should not be committed to repository or shared** :warning:
+Commit the updated .travis.yml and the encrypted key file to github
+```git add terraform-keyfile.json.enc .travis.yml```
+```git commit -m "Updated service account```
+```git push -u origin master```
 
 
 
