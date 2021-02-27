@@ -1,0 +1,16 @@
+env:
+  global:
+    - GCP_PROJECT_ID=exam-295817
+    #Set which terraform version travis should install
+    - tf_version=0.13.5
+    #Disable google cloud sdk from asking prompts such as 'Are you sure...'
+    - CLOUDSDK_CORE_DISABLE_PROMPTS=1
+
+branches:
+  only:
+    #Only run travis on master branch
+    - master
+
+before_install:
+  #Travis will decrypt our key file and use it
+  - openssl aes-256-cbc -K $encrypted_61dc43fb09f9_key -iv $encrypted_61dc43fb09f9_iv -in terraform_keyfile.json.enc -out terraform_keyfile.json -d
