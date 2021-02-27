@@ -6,13 +6,16 @@
 The repository contains 3 independent guides. Guide 1 is necessary to complete before doing guide 2 and so on.
 
 ### Table of contents
-===
+<!--
+  ⚠️ DO NOT UPDATE THE TABLE OF CONTENTS MANUALLY ️️⚠️
+  run `npx markdown-toc -i README.md`
+-->
 
 <!-- toc -->
 
 - [Guide 1. Creating a Google Cloud Project and google service account](#guide-1-creating-a-google-cloud-project-and-google-service-account)
   * [1. Create a google project](#1-create-a-google-project)
-    + [2. Enable billing](#2-enable-billing)
+  * [2. Enable billing](#2-enable-billing)
   * [3. Create service account](#3-create-service-account)
   * [4. Add Key file to service account](#4-add-key-file-to-service-account)
 - [Guide 2. Creating the bucket](#guide-2-creating-the-bucket)
@@ -42,7 +45,7 @@ In order to create a Google Cloud bucket you will need a Google Cloud Project & 
 If you already have a Google Cloud Project and Google Service account, you can skip this guide. Make sure you have a Key file as explained in step 4 however.
 ## 1. Create a google project
 Create a Google Cloud Project (https://cloud.google.com/)
-### 2. Enable billing
+## 2. Enable billing
 Click billing & make sure billing is enabled for the project.
 ## 3. Create service account
 We're going to open a Service account which terraform can use to create a bucket. 
