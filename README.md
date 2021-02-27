@@ -3,7 +3,7 @@
 - Repository 1/2 can be found [here](https://github.com/Leifhaa/konte)
 - The exam text can be found [here](https://github.com/Leifhaa/konte/docs)
 
-The repository contains 3 independent guides. Guide 1 is necessary to complete before doing guide 2 and so on. If you already have a Google Cloud Project and Google Service account, you can skip guide 1.
+The repository contains 3 independent guides. Guide 1 is necessary to complete before doing guide 2 and so on.
 
 
 
@@ -14,6 +14,7 @@ Prerequisites before running any of the guides:
 
 In order to create a Google Cloud bucket you will need a Google Cloud Project & a Google Service account. If you don't have this already, please follow these steps in order before proceeding with creating a bucket
 # Guide 1. Creating a Google Cloud Project and google service account
+If you already have a Google Cloud Project and Google Service account, you can skip this guide. Make sure you have a Key file as explained in step 4 however.
 ## 1. Create a google project
 Create a Google Cloud Project (https://cloud.google.com/)
 ### 2. Enable billing
