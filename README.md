@@ -74,10 +74,6 @@ Before following this guide, it's important that you've already completed these 
 - Created a Google Cloud project and service account. If not, follow [these steps](#Creating-a-google-cloud-project-and-google-service-account) before beginning.
 - Created a Google cloud bucket. If not, follow [these steps](#Creating-the-bucket) before beginning. We will use Google Cloud Storage to store a state file from Terraform.
 
-
-Before we start, the terraform service account will need more permissions. Add the following roles to our terraform service account:
-- Compute Admin = For administrating of compute instances
-
 - Identity and Access Management (IAM) API needs to be enabled (?)
 - Compute Engine API needs to be enabled
 
