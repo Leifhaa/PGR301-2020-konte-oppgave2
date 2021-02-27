@@ -1,4 +1,9 @@
-# GCP og Terraform (Task 2) ![Build Status](https://travis-ci.com/Leifhaa/PGR301-2020-konte-oppgave2.svg?branch=master)
+# GCP and Terraform ![Build Status](https://travis-ci.com/Leifhaa/PGR301-2020-konte-oppgave2.svg?branch=master)
+This is repository 2/2 of exam in lecture pgr301 (Continuation exam).
+Repository 1/2 can be found [here](https://github.com/Leifhaa/konte)
+The exam text can be found [here](https://github.com/Leifhaa/konte/docs)
+
+
 This project uses terraform to create a google cloud storage *bucket*. This bucket will eventually be used to save terraform state
 in task 3 of this exam
 
@@ -158,6 +163,8 @@ travis env set TF_ENV_machine_type f1-micro --public
 ```
 This will set an environment in travis which we will use to specify which type of compute instance we want.
 
+
+- Todo: Complete Init script deploy-linux
 
 
 
