@@ -85,7 +85,14 @@ Before we start, the terraform service account will need more permissions. Add t
 
 
 In this guide we will provision Google Cloud Platform services by using terraform. Let's get started!
-1. Open the ```backend.tf``` file in the root directory and change the bucket name to the bucket name which you previously created.
+1. In order to complete this guide, add the following roles to the service account:
+
+| Role name | Description |
+| --- | --- |
+| Storage Admin | Grants full controll of GCS sources, such as creating a bucket |
+| Compute Admin | Full control of compute resources, such as creating one |
+
+2. Open the ```backend.tf``` file in the root directory and change the bucket name to the bucket name which you previously created.
 ```
 terraform {
   #Save the terraform state (backend) to google cloud storage (gcs)
@@ -97,11 +104,11 @@ terraform {
   }
 }
 ```
-2. Open .travis.yml in the root folder. Change the Global enviroment variable "GCP_PROJECT_ID" to your project id
+3. Open .travis.yml in the root folder. Change the Global enviroment variable "GCP_PROJECT_ID" to your project id
 ```env:
      global:
        - GCP_PROJECT_ID=helloworld       <-------------- Change helloworld to your google cloud project id
 ```
-3. 
+4. 
 
 
