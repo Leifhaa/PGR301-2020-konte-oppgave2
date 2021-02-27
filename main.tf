@@ -23,7 +23,8 @@ resource "google_compute_instance" "gcp-compute-instance" {
 
   network_interface {
     #Name of the network which the server should be connected to
-    network = "default"
+    #The Vm instance will use our created network instead of default one.
+    network =  google_compute_network.vpc_network.self_link
 
     access_config {
       // Empty - means the address will be automatically assigned.
@@ -38,4 +39,10 @@ resource "google_compute_instance" "gcp-compute-instance" {
   }
 
 
+}
+
+#Create a network resource with a subnetwork in each region
+resource "google_compute_network" "vpc_network" {
+  name = "hello-konte-network"
+  auto_create_subnetworks = true
 }
