@@ -7,8 +7,3 @@ variable "machine_type" {
   description = "Specifies which type of machine to create in google compute"
   type = string
 }
-
-variable "test_var" {
-  description = "Specifies which type of machine to create in google compute"
-  type = string
-}
