@@ -1,4 +1,4 @@
-# GCP og Terraform (Task 2)
+# GCP og Terraform (Task 2) [![Build Status](https://travis-ci.com/Leifhaa/PGR301-2020-konte-oppgave2.svg?branch=master)]
 This project uses terraform to create a google cloud storage *bucket*. This bucket will eventually be used to save terraform state
 in task 3 of this exam
 
