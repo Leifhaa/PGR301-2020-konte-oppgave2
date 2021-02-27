@@ -7,7 +7,7 @@ Prerequisites:
 * Installed Gcloud SDK (https://cloud.google.com/sdk/docs/install)
 
 In order to create a Google Cloud bucket you will need a Google Cloud Project & a Google Service account. If you don't have this already, please follow these steps in order before proceeding with creating a bucket
-###Creating a google cloud project and google service account
+### Creating a google cloud project and google service account
 1. Create a Google Cloud Project (https://cloud.google.com/)
 2. Click billing & make sure billing is enabled for the project.
 3. We're going to open a Service account which terraform can use to create a bucket. Open "Service accounts" in the console (Under IAM & Admin)
@@ -16,7 +16,7 @@ In order to create a Google Cloud bucket you will need a Google Cloud Project & 
 6. Open the newly created service account & click the "KEYS" tab. Create a new key by clicking "ADD NEW" and select JSON format. 
 7. A json file should have been downloaded which can be used to access the service account. **DO NOT SHARE IT AND DO NOT UPLOAD BY VERSION CONTROL AS IT IS SENSITIVE DATA**
 
-###Creating the bucket
+### Creating the bucket
 Before following this guide, make sure tou have already created a Google cloud project and service account.
 
 [Insert required priveledges here]
@@ -63,7 +63,7 @@ export TF_VAR_project_id=$gpc-project-id
 Todo: Følg den samme flyten som de har gjort på google tutorialene?
 
 
-###Provisioning GCP resources with Terraform
+### Provisioning GCP resources with Terraform
 Before following this guide, it's important that you've already completed these steps:
 - Created a Google Cloud project and service account. If not, follow [these steps](#Creating a google cloud project and google service account) first
 - Created a google cloud bucket. If not, please refer to the description above [Insert link] for how to create one. We will use Google Cloud Storage to store a state file from Terraform.
