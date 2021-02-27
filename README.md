@@ -3,16 +3,17 @@
 - Repository 1/2 can be found [here](https://github.com/Leifhaa/konte)
 - The exam text can be found [here](https://github.com/Leifhaa/konte/docs)
 
+The repository contains 3 independent guides. Guide 1 is necessary to complete before doing guide 2 and so on. If you already have a Google Cloud Project and Google Service account, you can skip guide 1.
 
-This project uses terraform to create a google cloud storage *bucket*. This bucket will eventually be used to save terraform state
-in task 3 of this exam
 
-Prerequisites:
+
+
+Prerequisites before running any of the guides:
 * Installed Terraform (https://www.terraform.io/downloads.html)
 * Installed Gcloud SDK (https://cloud.google.com/sdk/docs/install)
 
 In order to create a Google Cloud bucket you will need a Google Cloud Project & a Google Service account. If you don't have this already, please follow these steps in order before proceeding with creating a bucket
-# Creating a Google Cloud Project and google service account
+# Guide 1. Creating a Google Cloud Project and google service account
 ## 1. Create a google project
 Create a Google Cloud Project (https://cloud.google.com/)
 ### 2. Enable billing
@@ -27,7 +28,7 @@ We're going to open a Service account which terraform can use to create a bucket
 A json file should have been downloaded which can be used to access the service account. :warning: **DO NOT SHARE IT AND DO NOT UPLOAD BY VERSION CONTROL AS IT IS SENSITIVE DATA** :warning:
 
 
-# Creating the bucket
+# Guide 2. Creating the bucket
 Before following this guide, it's important that you've already completed these steps:
 - Created a Google Cloud project and service account. If not, follow [these steps](#Creating-a-google-cloud-project-and-google-service-account) before beginning.
 
@@ -84,7 +85,7 @@ terraform apply
 >Tip: Step 3-7 could also be done by opening the init/scripts folder and running the deploy script according to your operating system.
 TODO: TEST LINUX SCRIPT
 
-# Provisioning GCP resources with Terraform
+# Guide 3. Provisioning GCP resources with Terraform
 Before following this guide, it's important that you've already completed these steps:
 - Created a Google Cloud project and service account. If not, follow [these steps](#Creating-a-google-cloud-project-and-google-service-account) before beginning.
 - Created a Google cloud bucket. If not, follow [these steps](#Creating-the-bucket) before beginning. We will use Google Cloud Storage to store a state file from Terraform.
