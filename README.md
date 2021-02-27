@@ -3,7 +3,7 @@
 - Repository 1/2 can be found [here](https://github.com/Leifhaa/konte)
 - The exam text can be found [here](https://github.com/Leifhaa/konte/docs)
 
-The repository contains 3 independent guides. Guide 1 is necessary to complete before doing guide 2 and so on.
+The repository contains 3 independent guides. Guide 1 is necessary to complete before doing guide 2 and so on. Guide 2 answers task 2 of the exam. Guide 3 answers task 3 of the exam.
 
 ### Table of contents
 <!--
