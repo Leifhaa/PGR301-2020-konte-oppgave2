@@ -70,33 +70,36 @@ In order to complete this guide, add the following roles to the service account:
 You should already have a .json file attached to a service account with sufficient roles to create a bucket. Rename this file to `terraform_keyfile.json` And place it in the root folder of this project. Terraform will use the file for authentication & authorization
 ## 3. Set bucket name
 Great, terraform has an identity, and is ready to create the bucket! We're missing a name for the bucket however. Run the following command to create an environment variable which Terraform will use to name the bucket
-For windows:
+<br>
+For windows users, run command:
 ```
 set gcp-bucket-name=[INSERT BUCKET NAME HERE]
 ```
-For linux/mac:
+For linux/mac users, run command:
 ```
 export gcp-bucket-name=[INSERT BUCKET NAME HERE]
 ```
 Note: Bucket name is unique & global meaning that you can't have same bucket name as anyone else.
 ## 4. Set project id
 Set the project id of the google cloud project as an environment variable:
-For windows:
+<br>
+For windows users, run command:
 ```
 set gcp-project-id=[INSERT PROJECT ID HERE]
 ```
-For linux/mac:
+For linux/mac users, run command:
 ```
 export gcp-project-id=[INSERT PROJECT ID HERE]
 ```
 ## 5 Export terraform variables
 Export the environment variables to terraform
-For windows:
+<br>
+For windows users, run command:
 ```
 set TF_VAR_bucket_name=%gcp-bucket-name%
 set TF_VAR_project_id=%gcp-project-id%
 ```
-For linux/mac:
+For linux/mac users, run command:
 ```
 export TF_VAR_bucket_name=$gpc-bucket-name
 export TF_VAR_project_id=$gpc-project-id
