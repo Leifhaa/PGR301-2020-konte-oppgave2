@@ -1,3 +1,9 @@
+#Create a service account
+resource "google_service_account" "compute-service-account" {
+  account_id   = "compute-account"
+  display_name = "Service account for cloud compute"
+}
+
 resource "google_compute_instance" "gcp-compute-instance" {
   name         = "hello-konte"
   machine_type = var.machine_type
@@ -22,6 +28,13 @@ resource "google_compute_instance" "gcp-compute-instance" {
     access_config {
       // Empty - means the address will be automatically assigned.
     }
+  }
+
+  service_account {
+    # Set the created service account
+    email  = google_service_account.compute-service-account.email
+    #Google recommends the service account to have cloud-platform scope
+    scopes = ["cloud-platform"]
   }
 
 
