@@ -7,11 +7,31 @@ The repository contains 3 independent guides. Guide 1 is necessary to complete b
 
 ### Table of contents
 ===
-<!--ts-->
-    * [Guide 1](Guide-1.-Creating-a-Google-Cloud-Project-and-google-service-account)
-<!--te-->
 
+<!-- toc -->
 
+- [Guide 1. Creating a Google Cloud Project and google service account](#guide-1-creating-a-google-cloud-project-and-google-service-account)
+  * [1. Create a google project](#1-create-a-google-project)
+    + [2. Enable billing](#2-enable-billing)
+  * [3. Create service account](#3-create-service-account)
+  * [4. Add Key file to service account](#4-add-key-file-to-service-account)
+- [Guide 2. Creating the bucket](#guide-2-creating-the-bucket)
+  * [1. Add roles to the service account](#1-add-roles-to-the-service-account)
+  * [2. Set keyfile](#2-set-keyfile)
+  * [3. Set bucket name](#3-set-bucket-name)
+  * [4. Set project id](#4-set-project-id)
+  * [5 Export terraform variables](#5-export-terraform-variables)
+  * [6 Run terraform](#6-run-terraform)
+  * [7. Viola! Terraform has now created a bucket which can be found in the google cloud project.](#7-viola-terraform-has-now-created-a-bucket-which-can-be-found-in-the-google-cloud-project)
+- [Guide 3. Provisioning GCP resources with Terraform](#guide-3-provisioning-gcp-resources-with-terraform)
+  * [1. Setting up the roles](#1-setting-up-the-roles)
+  * [2. Set terraform backend storage](#2-set-terraform-backend-storage)
+  * [3. Open .travis.yml located the root folder. Change the Global environment variable "GCP_PROJECT_ID" to your project id](#3-open-travisyml-located-the-root-folder-change-the-global-environment-variable-gcp_project_id-to-your-project-id)
+  * [4. Encrypt service account key file](#4-encrypt-service-account-key-file)
+  * [5. Commit the changes](#5-commit-the-changes)
+  * [6. Set travis environment variable](#6-set-travis-environment-variable)
+
+<!-- tocstop -->
 
 Prerequisites before running any of the guides:
 * Installed Terraform (https://www.terraform.io/downloads.html)
@@ -172,6 +192,3 @@ This will set an environment in travis which we will use to specify which type o
 
 
 - Todo: Complete Init script deploy-linux
-
-
-
