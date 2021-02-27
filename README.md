@@ -172,16 +172,16 @@ before_install:
 
 
 ## 5. Commit the changes
-:warning: **The terraform.keyfile.json file should not be committed to repository or shared** :warning:.\
-Commit the updated `.travis.yml` and `terraform_keyfile.json.enc`  file to github. Notice we commit the encrypted file, not the original key file
+:warning: **The terraform.keyfile.json file should not be committed to repository or shared** :warning:\
+Commit the updated `.travis.yml` and `terraform_keyfile.json.enc`  file to github. Notice we commit the encrypted file, not the original key file.\ Run command
 ```shell script
 git add terraform_keyfile.json.enc .travis.yml
 ```
-
+Run command
 ```shell script 
 git commit -m "Updated service account"
 ```
-
+Run command
 ```shell script
 git push -u origin master
 ```
