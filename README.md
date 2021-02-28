@@ -42,7 +42,7 @@ The repository contains 3 independent guides. Guide 1 is necessary to complete b
 <!-- tocstop -->
 
 # Guide 1. Creating a Google Cloud Project and google service account
-![alt text](https://github.com/Leifhaa/PGR301-2020-konte-oppgave2/blob/master/docs/Guide-1.png?raw=true) <br>
+![](./docs/Guide-1.png) <br>
 If you already have a Google Cloud Project and Google Service account, you can skip this guide. Make sure you have a Key file as explained in step 4.
 ## 1. Create a google project
 Create a Google Cloud Project (https://cloud.google.com/)
