@@ -7,7 +7,7 @@ The repository contains 3 independent guides. Guide 1 is necessary to complete b
 * Guide 2 answers task 2 of the exam. 
 * Guide 3 answers task 3 of the exam.  
 
-## Prerequisites before running any of the guides:
+## Prerequisites before running the guides:
 * Installed Terraform (https://www.terraform.io/downloads.html)
 * Installed Gcloud SDK (https://cloud.google.com/sdk/docs/install)
 ### Table of contents
