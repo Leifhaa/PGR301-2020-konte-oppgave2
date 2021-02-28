@@ -22,7 +22,7 @@ This repository contains 3 independent guides for managing [Google Cloud Platfor
   * [2. Enable billing](#2-enable-billing)
   * [3. Create service account](#3-create-service-account)
   * [4. Add Key file to service account](#4-add-key-file-to-service-account)
-- [Guide 2. Creating a Google with terraform](#guide-2-creating-a-google-with-terraform)
+- [Guide 2. Creating a Google Storage Bucket with terraform](#guide-2-creating-a-google-storage-bucket-with-terraform)
   * [1. Add roles to the service account](#1-add-roles-to-the-service-account)
   * [2. Set keyfile](#2-set-keyfile)
   * [3. Set bucket name](#3-set-bucket-name)
@@ -62,7 +62,7 @@ A json file should have been downloaded which can be used to access the service 
 <br />
 <br />
 
-# Guide 2. Creating a Google with terraform
+# Guide 2. Creating a Google Storage Bucket with terraform
 ![](./docs/travis-terraform.png) <br>
 
 :information_source: Before following this guide, it's important that you've already completed these steps:
