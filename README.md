@@ -57,7 +57,10 @@ We're going to open a Service account which terraform can use to create a bucket
 - Open the newly created service account & click the "KEYS" tab. Create a new key by clicking "ADD NEW" and select JSON format. 
 A json file should have been downloaded which can be used to access the service account.<br> :warning: **DO NOT SHARE IT AND DO NOT UPLOAD BY VERSION CONTROL AS IT IS SENSITIVE DATA** :warning:
 
-
+<br>
+<br>
+<br>
+<br>
 # Guide 2. Creating the bucket
 ![](./docs/travis-terraform.png) <br>
 
@@ -120,6 +123,9 @@ terraform apply
 >Tip: Step 3-7 could also be done by opening the init/scripts folder and running the deploy script according to your operating system.
 TODO: TEST LINUX SCRIPT
 
+<br>
+<br>
+<br>
 # Guide 3. Provisioning GCP resources with Terraform
 ![](./docs/terraform-travis-compute.png) <br>
 Before following this guide, it's important that you've already completed these steps:
