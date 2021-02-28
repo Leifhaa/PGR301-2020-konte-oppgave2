@@ -65,7 +65,7 @@ A json file should have been downloaded which can be used to access the service 
 # Guide 2. Creating a Google with terraform
 ![](./docs/travis-terraform.png) <br>
 
-Before following this guide, it's important that you've already completed these steps:
+:information_source: Before following this guide, it's important that you've already completed these steps:
 - Created a Google Cloud project and service account. If not, follow [these steps](#Guide-1-Creating-a-Google-Cloud-Project-and-google-service-account) before beginning.
 
 
