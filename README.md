@@ -1,7 +1,7 @@
 # GCP and Terraform ![Build Status](https://travis-ci.com/Leifhaa/PGR301-2020-konte-oppgave2.svg?branch=master)
 
 ## Introduction
-This is repository 2/2 of [exam](https://github.com/Leifhaa/PGR301-2020-konte-oppgave2/tree/master/docs) in lecture pgr301 (Continuation exam). Repository 1/2 can be found [here](https://github.com/Leifhaa/konte)
+This is repository 2/2 of [exam in lecture pgr301 (Continuation exam)](https://github.com/Leifhaa/PGR301-2020-konte-oppgave2/tree/master/docs). Repository 1/2 can be found [here](https://github.com/Leifhaa/konte)
 This repository contains 3 independent guides for managing [Google Cloud Platform](#https://cloud.google.com/). Guide 1 is necessary to complete before doing guide 2 and so on. 
 * Guide 2 answers task 2 of the exam. 
 * Guide 3 answers task 3 of the exam.  
