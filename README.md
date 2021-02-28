@@ -147,6 +147,7 @@ Your service account will need sufficient roles in order to create the infrastru
 | Storage Admin | Grants full controll of GCS sources | Needs access to bucket for managing the state file |
 | Compute Admin | Full control of compute resources | Needs access to create, delete and manage compute instances  |
 | Create Service Accounts | Access to create service accounts | Terraform needs to create a service account for compute instance (recommended by google) |
+| Delete Service Accounts | Access to delete service accounts | Needed if we edit accounts or do destroy infrastructure |
 | Service Account User | Run operation as the service account | Needed for attaching created service account to compute instance (recommended by google) |
 > Notice: We're only adding required roles to the service account. This reduces damage in case the service account is stolen.
 ## 2. Set terraform backend storage
@@ -228,8 +229,9 @@ git push -u origin master
  Once travis successfully finished running, the infrastructure according to our terraform files should be live on google cloud platform. Congratulations on your new infrastructure! :construction_worker: :construction_worker:
 
 ## 8. Destroy the project (Optional)
-Running the infrastructure costs money. If your no longer interested in having the infrastructure live & want to save money, run do the following:
+Running the infrastructure costs money. If your no longer interested in having the infrastructure live & want to save money, open terminal in root directory and run:
 ```shell script
+terraform init
 terraform destroy
 ```
 Terraform will ask you to enter var.machine_type. Enter the same machine value as you set in [step 4](#4-Set-travis-environment-variable)
