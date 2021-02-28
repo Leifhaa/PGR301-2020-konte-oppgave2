@@ -162,6 +162,7 @@ terraform {
   }
 }
 ```
+Push the change to github
 
 ## 3. Edit project id in travis
 Open .travis.yml located the root folder. Change the Global environment variable "GCP_PROJECT_ID" to your project id
@@ -202,7 +203,7 @@ before_install:
 :warning: **The unencrypted terraform_keyfile.json file should not be committed to repository or shared** :warning:\
 Commit the updated `.travis.yml` and `terraform_keyfile.json.enc`  file to github. Notice we commit the encrypted file, not the original key file.<br> Run command
 ```shell script
-git add terraform_keyfile.json.enc .travis.yml backend.tf .travis.yml
+git add terraform_keyfile.json.enc .travis.yml 
 ```
 Run command
 ```shell script 
