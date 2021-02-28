@@ -35,9 +35,10 @@ The repository contains 3 independent guides. Guide 1 is necessary to complete b
   * [1. Setting up the roles](#1-setting-up-the-roles)
   * [2. Set terraform backend storage](#2-set-terraform-backend-storage)
   * [3. Edit project id in travis](#3-edit-project-id-in-travis)
-  * [4. Encrypt service account key file](#4-encrypt-service-account-key-file)
-  * [5. Commit the changes](#5-commit-the-changes)
-  * [6. Set travis environment variable](#6-set-travis-environment-variable)
+  * [4. Set travis environment variable](#4-set-travis-environment-variable)
+  * [5. Encrypt service account key file](#5-encrypt-service-account-key-file)
+  * [6. Commit the changes](#6-commit-the-changes)
+  * [7. Trigger a build!](#7-trigger-a-build)
 
 <!-- tocstop -->
 
@@ -165,7 +166,15 @@ env:
   global:
 !     - GCP_PROJECT_ID=helloworld       <------  Change helloworld to your google cloud project id
 ```
-## 4. Encrypt service account key file
+
+## 4. Set travis environment variable
+Run command 
+```shell script
+travis env set TF_ENV_machine_type f1-micro --public
+```
+This will set an environment in travis which we will use to specify which type of compute instance we want.
+
+## 5. Encrypt service account key file
 Considering we want travis to run terraform for building the infrastructure, it needs to authenticate itself. We will encrypt the json key file attached to the service account upload this encrypted file to travis so it can authenticate.
 - Make sure the json key file is located in the root directory of this project. It has to be named `terraform_keyfile.json`
 - Make sure terminal is in the root directory of this project and run the following:
@@ -185,7 +194,7 @@ before_install:
 ```
 
 
-## 5. Commit the changes
+## 6. Commit the changes
 :warning: **The terraform.keyfile.json file should not be committed to repository or shared** :warning:\
 Commit the updated `.travis.yml` and `terraform_keyfile.json.enc`  file to github. Notice we commit the encrypted file, not the original key file.<br> Run command
 ```shell script
@@ -200,14 +209,9 @@ Run command
 git push -u origin master
 ```
 
-## 6. Set travis environment variable
-Run command 
-```shell script
-travis env set TF_ENV_machine_type f1-micro --public
-```
-This will set an environment in travis which we will use to specify which type of compute instance we want.
+
 
 ## 7. Trigger a build!
-Trigger a build travis build by commiting and pushing a change to master/main branch. Travis won't build on other branches. Visit [travis](https://travis-ci.com/) and click this repository to view the process of terraform setting up our infrastructure via travis. You can view the Job log and see any if there's any errors, what infrastructure changes are applied etc. Once travis successfully finished running, the infrastructure according to our terraform files should be live on google cloud platform. Congratulations on your new infrastructure! :construction_worker:
+Trigger a new build travis build by committing and pushing a change to master/main branch. Travis won't build on other branches. Visit [travis](https://travis-ci.com/) and click this repository to view the process of terraform setting up our infrastructure via travis. You can view the Job log and see any if there's any errors, what infrastructure changes are applied etc. Once travis successfully finished running, the infrastructure according to our terraform files should be live on google cloud platform. Congratulations on your new infrastructure! :construction_worker:
 
 - Todo: Complete Init script deploy-linux
