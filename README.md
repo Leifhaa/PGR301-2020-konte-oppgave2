@@ -116,7 +116,7 @@ export TF_VAR_project_id=$gpc-project-id
 ```
 
 ## 6 Run terraform
-Make sure terminal is open in `init` directory. <br />
+Make sure terminal is open in `/init` directory. <br />
 Run the following commands:
 ```sh
 terraform init
