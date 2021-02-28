@@ -4,6 +4,6 @@ variable "project_id" {
 }
 
 variable "machine_type" {
-  description = "Specifies which type of machine to create in google compute"
+  description = "Specifies type of machine in google compute"
   type = string
 }

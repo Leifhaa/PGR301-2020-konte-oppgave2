@@ -219,4 +219,11 @@ git push -u origin master
  
  Once travis successfully finished running, the infrastructure according to our terraform files should be live on google cloud platform. Congratulations on your new infrastructure! :construction_worker: :construction_worker:
 
+## 8. Destroy the project (Optional)
+Running the infrastructure costs money. If your no longer interested in having the infrastructure live & want to save money, run do the following:
+```shell script
+terraform destroy
+```
+Terraform will ask you to enter var.machine_type. Enter the same machine value as you set in [step 4](#4-Set-travis-environment-variable)
+
 - Todo: Complete Init script deploy-linux
