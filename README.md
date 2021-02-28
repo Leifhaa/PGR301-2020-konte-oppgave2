@@ -207,5 +207,7 @@ travis env set TF_ENV_machine_type f1-micro --public
 ```
 This will set an environment in travis which we will use to specify which type of compute instance we want.
 
+## 7. Trigger a build!
+Trigger a build travis build by commiting and pushing a change to master/main branch. Travis won't build on other branches. Visit [travis](https://travis-ci.com/) and click this repository to view the process of terraform setting up our infrastructure via travis. You can view the Job log and see any if there's any errors, what infrastructure changes are applied etc. Once travis successfully finished running, the infrastructure according to our terraform files should be live on google cloud platform. Congratulations on your new infrastructure! :construction_worker:
 
 - Todo: Complete Init script deploy-linux
