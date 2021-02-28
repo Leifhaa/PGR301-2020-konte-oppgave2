@@ -4,7 +4,7 @@
 - The exam text can be found [here](https://github.com/Leifhaa/PGR301-2020-konte-oppgave2/tree/master/docs)
 
 ## Introduction
-This repository contains 3 independent guides. Guide 1 is necessary to complete before doing guide 2 and so on. 
+This repository contains 3 independent guides for managing [Google Cloud Platform](#https://cloud.google.com/). Guide 1 is necessary to complete before doing guide 2 and so on. 
 * Guide 2 answers task 2 of the exam. 
 * Guide 3 answers task 3 of the exam.  
 
