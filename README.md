@@ -211,7 +211,7 @@ git commit -m "Updated service account"
 ```
 Run command
 ```shell script
-git push -u origin main
+git push -u origin master
 ```
 
 
