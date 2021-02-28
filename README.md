@@ -53,7 +53,7 @@ Click billing & make sure billing is enabled for the project.
 We're going to open a Service account which terraform can use to create a bucket. 
 - Open "Service accounts" in the console (Under IAM & Admin).
 - Click "Create service account"
-- Fill in account details. Skip adding roles now, as we will handle these later
+- Fill in account details. Add role Storage Admin to the service account.
 ## 4. Add Key file to service account
 - Open the newly created service account & click the "KEYS" tab. Create a new key by clicking "ADD NEW" and select JSON format. 
 A json file should have been downloaded which can be used to access the service account.<br> :warning: **DO NOT SHARE IT AND DO NOT UPLOAD BY VERSION CONTROL AS IT IS SENSITIVE DATA** :warning:
@@ -70,13 +70,14 @@ A json file should have been downloaded which can be used to access the service 
 
 
 ## 1. Add roles to the service account
-In order to complete this guide, add the following roles to the service account:
+In order to complete this guide, add the following roles to the service account if you have not already:
 | Role name | Description | Reason |
 | --- | --- | --- |
 | Storage Admin | Grants full controll of GCS sources | Service account needs to be allowed to create a bucket
 
 ## 2. Set keyfile
-You should already have a .json file attached to a service account with sufficient roles to create a bucket. Rename this file to `terraform_keyfile.json` And place it in the root folder of this project. Terraform will use the file for authentication & authorization
+You should already have a .json file attached to a service account with sufficient roles to create a bucket. Rename this file to `terraform_keyfile.json` And place it in the root folder of this project. Terraform will use the file for authentication & authorization. :warning: **The terraform.keyfile.json file should not be committed to repository or shared** :warning:\
+
 ## 3. Set bucket name
 Great, terraform has an identity, and is ready to create the bucket! We're missing a name for the bucket however. Run the following command to create an environment variable which Terraform will use to name the bucket
 <br>
