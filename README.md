@@ -134,7 +134,7 @@ terraform apply
 :information_source: Before following this guide, it's important that you've already completed these steps:
 - Created a Google Cloud project and service account. If not, follow [these steps](#Guide-1-Creating-a-Google-Cloud-Project-and-google-service-account) before beginning.
 - Created a Google cloud bucket. If not, follow [these steps](#Guide-2-Creating-the-bucket) before beginning. We will use Google Cloud Storage to store a state file from Terraform.
-- Compute Engine API needs to be enabled
+- Compute Engine API needs to be enabled in Google Cloud Console.
 
 
 In this guide we will provision Google Cloud Platform services by using terraform. Let's get started!
@@ -161,6 +161,7 @@ terraform {
   }
 }
 ```
+
 ## 3. Edit project id in travis
 Open .travis.yml located the root folder. Change the Global environment variable "GCP_PROJECT_ID" to your project id
 ```diff
@@ -200,7 +201,7 @@ before_install:
 :warning: **The unencrypted terraform_keyfile.json file should not be committed to repository or shared** :warning:\
 Commit the updated `.travis.yml` and `terraform_keyfile.json.enc`  file to github. Notice we commit the encrypted file, not the original key file.<br> Run command
 ```shell script
-git add terraform_keyfile.json.enc .travis.yml
+git add terraform_keyfile.json.enc .travis.yml backend.tf .travis.yml
 ```
 Run command
 ```shell script 
