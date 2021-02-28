@@ -135,6 +135,7 @@ terraform apply
 - Created a Google Cloud project and service account. If not, follow [these steps](#Guide-1-Creating-a-Google-Cloud-Project-and-google-service-account) before beginning.
 - Created a Google cloud bucket. If not, follow [these steps](#Guide-2-Creating-the-bucket) before beginning. We will use Google Cloud Storage to store a state file from Terraform.
 - Compute Engine API needs to be enabled in Google Cloud Console.
+- Identity and Access Management (IAM) API needs to be enabled in Google Cloud Console.
 
 
 In this guide we will provision Google Cloud Platform services by using terraform. Let's get started!
