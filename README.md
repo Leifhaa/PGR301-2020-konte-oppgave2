@@ -89,7 +89,7 @@ For linux/mac users, run command:
 ```
 export gcp-bucket-name=[INSERT BUCKET NAME HERE]
 ```
-Note: Bucket name is unique & global meaning that you can't have same bucket name as anyone else.
+>Note: Bucket name is unique & global meaning that you can't have same bucket name as anyone else.
 ## 4. Set project id
 Set the project id of the google cloud project as an environment variable:
 <br>
