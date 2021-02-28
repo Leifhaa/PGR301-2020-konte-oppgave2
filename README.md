@@ -129,7 +129,7 @@ terraform apply
 
 # Guide 3. Provisioning GCP resources with Terraform
 ![](./docs/terraform-travis-compute.png) <br>
-Before following this guide, it's important that you've already completed these steps:
+:information_source: Before following this guide, it's important that you've already completed these steps:
 - Created a Google Cloud project and service account. If not, follow [these steps](#Guide-1-Creating-a-Google-Cloud-Project-and-google-service-account) before beginning.
 - Created a Google cloud bucket. If not, follow [these steps](#Guide-2-Creating-the-bucket) before beginning. We will use Google Cloud Storage to store a state file from Terraform.
 - Compute Engine API needs to be enabled
