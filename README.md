@@ -134,7 +134,8 @@ terraform apply
 :information_source: Before following this guide, it's important that you've already completed these steps:
 - Created a Google Cloud project and service account. If not, follow [these steps](#Guide-1-Creating-a-Google-Cloud-Project-and-google-service-account) before beginning.
 - Created a Google cloud bucket. If not, follow [these steps](#Guide-2-Creating-the-bucket) before beginning. We will use Google Cloud Storage to store a state file from Terraform.
-- Compute Engine API needs to be enabled
+- Compute Engine API needs to be enabled in Google Cloud Console.
+- Identity and Access Management (IAM) API needs to be enabled in Google Cloud Console.
 
 
 In this guide we will provision Google Cloud Platform services by using terraform. Let's get started!
@@ -161,6 +162,8 @@ terraform {
   }
 }
 ```
+Push the change to github
+
 ## 3. Edit project id in travis
 Open .travis.yml located the root folder. Change the Global environment variable "GCP_PROJECT_ID" to your project id
 ```diff
@@ -177,7 +180,7 @@ travis env set TF_ENV_machine_type f1-micro --public
 This will set an environment in travis which we will use to specify which type of compute instance we want.
 
 ## 5. Encrypt service account key file
-Considering we want travis to run terraform for building the infrastructure, it needs to authenticate itself. We will encrypt the json key file attached to the service account upload this encrypted file to travis so it can authenticate.
+Considering we want travis to run terraform for building the infrastructure, it needs to authenticate itself. We will encrypt the json key file attached to the service account upload this encrypted file to github so travis collect it and authenticate with it.
 - Make sure the json key file is located in the root directory of this project. It has to be named `terraform_keyfile.json`
 - Make sure terminal is in the root directory of this project and run the following:
 ```sh
@@ -197,10 +200,10 @@ before_install:
 
 
 ## 6. Commit the changes
-:warning: **The terraform.keyfile.json file should not be committed to repository or shared** :warning:\
+:warning: **The unencrypted terraform_keyfile.json file should not be committed to repository or shared** :warning:\
 Commit the updated `.travis.yml` and `terraform_keyfile.json.enc`  file to github. Notice we commit the encrypted file, not the original key file.<br> Run command
 ```shell script
-git add terraform_keyfile.json.enc .travis.yml
+git add terraform_keyfile.json.enc .travis.yml 
 ```
 Run command
 ```shell script 
@@ -228,4 +231,4 @@ terraform destroy
 ```
 Terraform will ask you to enter var.machine_type. Enter the same machine value as you set in [step 4](#4-Set-travis-environment-variable)
 
-- Todo: Complete Init script deploy-linux
+- Todo: Complete Init script deploy-linux...  
