@@ -3,7 +3,8 @@
 - Repository 1/2 can be found [here](https://github.com/Leifhaa/konte)
 - The exam text can be found [here](https://github.com/Leifhaa/PGR301-2020-konte-oppgave2/tree/master/docs)
 
-The repository contains 3 independent guides. Guide 1 is necessary to complete before doing guide 2 and so on. 
+## Intro
+This repository contains 3 independent guides. Guide 1 is necessary to complete before doing guide 2 and so on. 
 * Guide 2 answers task 2 of the exam. 
 * Guide 3 answers task 3 of the exam.  
 
@@ -23,7 +24,7 @@ The repository contains 3 independent guides. Guide 1 is necessary to complete b
   * [2. Enable billing](#2-enable-billing)
   * [3. Create service account](#3-create-service-account)
   * [4. Add Key file to service account](#4-add-key-file-to-service-account)
-- [Guide 2. Creating the bucket](#guide-2-creating-the-bucket)
+- [Guide 2. Creating a Google with terraform](#guide-2-creating-a-google-with-terraform)
   * [1. Add roles to the service account](#1-add-roles-to-the-service-account)
   * [2. Set keyfile](#2-set-keyfile)
   * [3. Set bucket name](#3-set-bucket-name)
@@ -63,7 +64,7 @@ A json file should have been downloaded which can be used to access the service 
 <br />
 <br />
 
-# Guide 2. Creating the bucket
+# Guide 2. Creating a Google with terraform
 ![](./docs/travis-terraform.png) <br>
 
 Before following this guide, it's important that you've already completed these steps:
