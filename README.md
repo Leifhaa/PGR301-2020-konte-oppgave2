@@ -39,6 +39,7 @@ The repository contains 3 independent guides. Guide 1 is necessary to complete b
   * [5. Encrypt service account key file](#5-encrypt-service-account-key-file)
   * [6. Commit the changes](#6-commit-the-changes)
   * [7. Trigger a build!](#7-trigger-a-build)
+  * [8. Destroy the project (Optional)](#8-destroy-the-project-optional)
 
 <!-- tocstop -->
 
