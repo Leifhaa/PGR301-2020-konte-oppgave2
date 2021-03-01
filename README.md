@@ -221,7 +221,7 @@ git push -u origin master
 
 
 ## 7. Trigger a build!
-- Trigger a new build travis build by committing and pushing a change to master/main branch. Travis won't build on other branches. 
+- Trigger a new build travis build by committing and pushing a change to master branch. Travis won't build on other branches. 
 - Visit [travis](https://travis-ci.com/) and click this repository to view the process of terraform setting up our infrastructure via travis. 
 - You can view the Job log and see any if there's any errors, what infrastructure changes are applied etc. 
 <br />
