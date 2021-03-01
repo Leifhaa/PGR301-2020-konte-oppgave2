@@ -76,7 +76,7 @@ In order to complete this guide, add the following roles to the service account 
 | Storage Admin | Grants full controll of GCS sources | Service account needs to be allowed to create a bucket
 
 ## 2. Set keyfile
-You should already have a key .json file attached to a service account with sufficient roles to create a bucket. Rename this file to `terraform_keyfile.json` And place it in the `root directory` of this project. Terraform will use the file for authentication & authorization. :warning: **The terraform.keyfile.json file should not be committed to repository or shared** :warning:
+You should already have a key .json file attached to a service account with sufficient roles to create a bucket. Rename this file to `terraform_keyfile.json` And place it in the `root directory` of this project. Terraform will use the file for authentication & authorization. :warning: **The terraform_keyfile.json file should not be committed to repository or shared** :warning:
 
 ## 3. Set bucket name
 Great, terraform has an identity, and is ready to create the bucket! We're missing a name for the bucket however. Run the following command to create an environment variable which Terraform will use to name the bucket
