@@ -83,11 +83,11 @@ Great, terraform has an identity, and is ready to create the bucket! We're missi
 <br>
 For windows users, run command:
 ```
-set gcp-bucket-name=[INSERT BUCKET NAME HERE]
+set gcp_bucket_name=[INSERT BUCKET NAME HERE]
 ```
 For linux/mac users, run command:
 ```
-export gcp-bucket-name=[INSERT BUCKET NAME HERE]
+export gcp_bucket_name=[INSERT BUCKET NAME HERE]
 ```
 >Note: Bucket name is unique & global meaning that you can't have same bucket name as anyone else.
 ## 4. Set project id
@@ -95,24 +95,24 @@ Set the project id of the google cloud project as an environment variable:
 <br>
 For windows users, run command:
 ```
-set gcp-project-id=[INSERT PROJECT ID HERE]
+set gcp_project_id=[INSERT PROJECT ID HERE]
 ```
 For linux/mac users, run command:
 ```
-export gcp-project-id=[INSERT PROJECT ID HERE]
+export gcp_project_id=[INSERT PROJECT ID HERE]
 ```
 ## 5 Export terraform variables
 Export the environment variables to terraform
 <br>
 For windows users, run command:
 ```
-set TF_VAR_bucket_name=%gcp-bucket-name%
-set TF_VAR_project_id=%gcp-project-id%
+set TF_VAR_bucket_name=%gcp_bucket_name%
+set TF_VAR_project_id=%gcp_project_id%
 ```
 For linux/mac users, run command:
 ```
-export TF_VAR_bucket_name=$gpc-bucket-name
-export TF_VAR_project_id=$gpc-project-id
+export TF_VAR_bucket_name=$gpc_bucket_name
+export TF_VAR_project_id=$gpc_project_id
 ```
 
 ## 6 Run terraform
