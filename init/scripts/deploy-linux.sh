@@ -5,12 +5,12 @@ read var1
 echo "Please enter your google project id: "
 read var2
 cd ..
-export gcp_bucket_name=$var1
-export gcp_project_id=$var2
+export GPC_BUCKET_NAME=$var1
+export GPC_PROJECT_ID=$var2
 echo $var1
 echo $var2
-export TF_VAR_bucket_name=${gcp_bucket_name}
-export TF_VAR_project_id=${gcp_project_id}
+export TF_VAR_bucket_name=${GPC_BUCKET_NAME}
+export TF_VAR_project_id=${GPC_PROJECT_ID}
 terraform init
 terraform apply
 
