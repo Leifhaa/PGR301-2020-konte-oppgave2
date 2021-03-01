@@ -2,7 +2,7 @@
 
 ## Introduction
 This is repository 2/2 of [exam in lecture pgr301 (Continuation exam)](https://github.com/Leifhaa/PGR301-2020-konte-oppgave2/tree/master/docs). Repository 1/2 can be found [here](https://github.com/Leifhaa/konte).
-This repository contains 3 independent guides for managing [Google Cloud Platform](#https://cloud.google.com/). Guide 1 is necessary to complete before doing guide 2 and so on. 
+This repository contains 3 guides for managing [Google Cloud Platform](#https://cloud.google.com/). Guide 1 is necessary to complete before doing guide 2 and so on. 
 * Guide 2 answers task 2 of the exam. 
 * Guide 3 answers task 3 of the exam.  
 
@@ -76,7 +76,7 @@ In order to complete this guide, add the following roles to the service account 
 | Storage Admin | Grants full controll of GCS sources | Service account needs to be allowed to create a bucket
 
 ## 2. Set keyfile
-You should already have a .json file attached to a service account with sufficient roles to create a bucket. Rename this file to `terraform_keyfile.json` And place it in the root folder of this project. Terraform will use the file for authentication & authorization. :warning: **The terraform.keyfile.json file should not be committed to repository or shared** :warning:\
+You should already have a key .json file attached to a service account with sufficient roles to create a bucket. Rename this file to `terraform_keyfile.json` And place it in the `root directory` of this project. Terraform will use the file for authentication & authorization. :warning: **The terraform.keyfile.json file should not be committed to repository or shared** :warning:
 
 ## 3. Set bucket name
 Great, terraform has an identity, and is ready to create the bucket! We're missing a name for the bucket however. Run the following command to create an environment variable which Terraform will use to name the bucket
