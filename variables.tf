@@ -9,6 +9,6 @@ variable "machine_type" {
 }
 
 variable "foo_variable" {
-  description = "Variable is made to make a git push to ensure travis only builds infrastructure on master branch."
+  description = "Variable is made to make a git push to ensure travis only builds infrastructure on master branch.!"
   type = string
 }
