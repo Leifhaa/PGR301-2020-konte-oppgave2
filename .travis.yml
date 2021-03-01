@@ -1,7 +1,7 @@
 language: bash
 env:
   global:
-    - GCP_PROJECT_ID=hello-konte-1
+    - GCP_PROJECT_ID=hello-konte-5
     #Set which terraform version travis should install
     - tf_version=0.13.5
     #Disable google cloud sdk from asking prompts such as 'Are you sure...'
