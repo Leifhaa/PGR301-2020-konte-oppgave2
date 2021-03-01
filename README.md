@@ -111,8 +111,8 @@ set TF_VAR_project_id=%gcp_project_id%
 ```
 For linux/mac users, run command:
 ```
-export TF_VAR_bucket_name=$gpc_bucket_name
-export TF_VAR_project_id=$gpc_project_id
+export TF_VAR_bucket_name=${gpc_bucket_name}
+export TF_VAR_project_id=${gpc_project_id}
 ```
 
 ## 6 Run terraform
