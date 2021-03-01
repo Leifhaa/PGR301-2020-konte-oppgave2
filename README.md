@@ -234,5 +234,5 @@ Running the infrastructure costs money. If your no longer interested in having t
 terraform init
 terraform destroy
 ```
-Terraform will ask you to enter var.machine_type. Enter the same machine value as you set in [step 4](#4-Set-travis-environment-variable)
+
 
